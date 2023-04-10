@@ -1,26 +1,11 @@
 import './Transactions.module.css';
 import PropTypes from 'prop-types';
 
-const createColor = () => {
-  const color =
-    'rgba(' +
-    Math.round(Math.random() * 255) +
-    ',' +
-    Math.round(Math.random() * 255) +
-    ',' +
-    Math.round(Math.random() * 255) +
-    ',' +
-    0.2 +
-    ')';
-
-  return color;
-};
-
 export const TransactionHistory = ({ items }) => {
   return (
     <table>
       <thead>
-        <tr style={{ backgroundColor: createColor() }}>
+        <tr>
           <th>Type</th>
           <th>Amount</th>
           <th>Currency</th>
@@ -30,7 +15,7 @@ export const TransactionHistory = ({ items }) => {
       <tbody>
         {items.map(({ id, type, amount, currency }) => {
           return (
-            <tr key={id} style={{ backgroundColor: createColor() }}>
+            <tr key={id}>
               <td>{type}</td>
               <td>{amount}</td>
               <td>{currency}</td>
@@ -50,5 +35,5 @@ TransactionHistory.propTypes = {
       amount: PropTypes.string.isRequired,
       currency: PropTypes.string.isRequired,
     })
-  ),
+  ).isRequired,
 };
