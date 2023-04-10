@@ -1,4 +1,4 @@
-.transaction-history {
+.history {
   width: 100%;
   margin-left: auto;
   margin-right: auto;
@@ -16,7 +16,7 @@
   overflow: hidden;
 }
 
-.transaction-head {
+.head {
   border: 0px solid #b5b5b5;
 
   background-color: #00bcd5;
@@ -25,12 +25,12 @@
   text-transform: uppercase;
 }
 
-.transaction-title {
+.title {
   width: 33.3%;
   padding: 15px 5px;
 }
 
-.transaction-cell {
+.cell {
   padding: 15px 5px;
 
   text-transform: capitalize;
@@ -40,12 +40,12 @@
   cursor: pointer;
 }
 
-.transaction-cell:hover,
-.transaction-cell:focus {
+.cell:hover,
+.cell:focus {
   background-color: #c9dcdf;
   transition: background-color 250ms linear;
 }
 
-.transaction-row:nth-child(even) {
+.row:nth-child(even) {
   background-color: #ecf1f4;
 }
